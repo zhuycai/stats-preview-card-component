@@ -1,0 +1,223 @@
+:root {
+    /* main bg */
+    --very-dark-blue: hsl(233, 47%, 7%);
+    /* card bg */
+    --dark-desaturated-blue: hsl(244, 38%, 16%);
+    /* accent */
+    --soft-violet: hsl(277, 64%, 61%);
+    /* main heading, stats */
+    --white: hsl(0, 0%, 100%);
+    /* main paragraph */
+    --slightly-transparent-white-para: hsla(0, 0%, 100%, 0.75);
+    /* stat headings */
+    --slightly-transpatent-white-head: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+.color-soft-violet {
+    color: var(--soft-violet);
+}
+
+h2,
+p,
+body {
+    margin: 0;
+}
+
+body {
+    padding: 0 2em;
+    font-size: 15px;
+    background: var(--very-dark-blue);
+}
+
+main {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    min-width: 220px;
+    border-radius: .6em;
+    font-family: Inter;
+    color: var(--slightly-transparent-white-para);
+    text-align: center;
+    background: var(--dark-desaturated-blue);
+}
+
+.card-photo {
+    position: relative;
+}
+
+.card-photo::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: var(--soft-violet);
+    opacity: .5;
+}
+
+.card-photo::after,
+.card-photo>img {
+    display: block;
+    border-top-left-radius: .6em;
+    border-top-right-radius: .6em;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    padding: 2.4em 1.6em;
+}
+
+.card-title,
+.data-value {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.card-intro {
+    line-height: 1.6em;
+}
+
+.data-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    margin-top: 1.2em;
+}
+
+@media (min-width: 420px) {
+    .data-wrapper {
+        flex-direction: row;
+        justify-content: center;
+        gap: calc(2.4em + 5%);
+        margin-top: 1.8em;
+    }
+}
+
+.data-value {
+    margin-bottom: .4em;
+    font-size: 1.6em;
+}
+
+.data-category {
+    font-size: .8em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+footer {
+    text-align: center;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--slightly-transparent-white-para);
+}
+
+.attribution a {
+    color: hsl(228, 68%, 62%);
+}
+
+
+@media (min-width: 960px) {
+    .card {
+        max-width: 965px;
+        flex-direction: row-reverse;
+    }
+
+    .card-photo, .card-info {
+        width: 50%;
+    }
+
+    .card-photo > img {
+        border-radius: 0;
+        border-top-right-radius: .6em;
+        border-bottom-right-radius: .6em;
+    }
+
+    .card-info {
+        justify-content: space-around;
+        text-align: left;
+    }
+
+    .data-wrapper {
+        justify-content: left;
+    }
+}
+
+/* inter-regular */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: regular;
+    src: url('//lib.baomitu.com/fonts/inter/inter-regular.eot');
+    /* IE9 Compat Modes */
+    src: local('Inter'), local('Inter-Normal'),
+        url('//lib.baomitu.com/fonts/inter/inter-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('//lib.baomitu.com/fonts/inter/inter-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('//lib.baomitu.com/fonts/inter/inter-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('//lib.baomitu.com/fonts/inter/inter-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('//lib.baomitu.com/fonts/inter/inter-regular.svg#Inter') format('svg');
+    /* Legacy iOS */
+}
+
+/* inter-700 */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('//lib.baomitu.com/fonts/inter/inter-700.eot');
+    /* IE9 Compat Modes */
+    src: local('Inter'), local('Inter-Normal'),
+        url('//lib.baomitu.com/fonts/inter/inter-700.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('//lib.baomitu.com/fonts/inter/inter-700.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('//lib.baomitu.com/fonts/inter/inter-700.woff') format('woff'),
+        /* Modern Browsers */
+        url('//lib.baomitu.com/fonts/inter/inter-700.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('//lib.baomitu.com/fonts/inter/inter-700.svg#Inter') format('svg');
+    /* Legacy iOS */
+}
+
+/* lexend-deca-regular */
+@font-face {
+    font-family: 'Lexend Deca';
+    font-style: normal;
+    font-weight: regular;
+    src: url('//lib.baomitu.com/fonts/lexend-deca/lexend-deca-regular.eot');
+    /* IE9 Compat Modes */
+    src: local('Lexend Deca'), local('LexendDeca-Normal'),
+        url('//lib.baomitu.com/fonts/lexend-deca/lexend-deca-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('//lib.baomitu.com/fonts/lexend-deca/lexend-deca-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('//lib.baomitu.com/fonts/lexend-deca/lexend-deca-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('//lib.baomitu.com/fonts/lexend-deca/lexend-deca-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('//lib.baomitu.com/fonts/lexend-deca/lexend-deca-regular.svg#LexendDeca') format('svg');
+    /* Legacy iOS */
+}
