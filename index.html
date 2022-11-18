@@ -8,6 +8,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/reset.css">
 
   <title>Frontend Mentor | Stats preview card component</title>
 </head>
@@ -18,27 +19,27 @@
     <div class="card">
       <picture class="card-photo">
         <source media="(min-width: 960px)" srcset="images/image-header-desktop.jpg">
-        <img src="images/image-header-mobile.jpg" alt="header image">
+        <img src="images/image-header-mobile.jpg" alt="" aria-hidden="true">
       </picture>
       <div class="card-info">
-        <h2 class="card-title">Get <span class="color-soft-violet">insights</span> that help your business grow.</h2>
+        <h1 class="card-title">Get <span class="color-soft-violet">insights</span> that help your business grow.</h1>
         <p class="card-intro">Discover the benefits of data analytics and make better decisions regarding revenue,
           customer
           experience, and overall efficiency.</p>
-        <div class="data-wrapper">
-          <div>
+        <ul class="data-wrapper">
+          <li>
             <p class="data-value">10k+</p>
             <p class="data-category">companies</p>
-          </div>
-          <div>
+          </li>
+          <li>
             <p class="data-value">314</p>
             <p class="data-category">templates</p>
-          </div>
-          <div>
+          </li>
+          <li>
             <p class="data-value">12m+</p>
             <p class="data-category">queries</p>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </div>
   </main>

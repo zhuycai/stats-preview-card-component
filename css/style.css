@@ -56,24 +56,15 @@ main {
 
 .card-photo {
     position: relative;
-}
-
-.card-photo::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: '';
     background: var(--soft-violet);
-    opacity: .5;
 }
 
-.card-photo::after,
 .card-photo>img {
     display: block;
     border-top-left-radius: .6em;
     border-top-right-radius: .6em;
+    mix-blend-mode: multiply;
+    opacity: .8;
 }
 
 .card-info {
